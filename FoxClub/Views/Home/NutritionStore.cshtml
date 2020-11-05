@@ -1,0 +1,11 @@
+﻿@{ Layout = "_Layout";}
+@Html.Partial("_MenuList")
+
+
+<form action="/nutritionStore" method="post">
+    <label for="food">Food</label>
+    <input type="text" name="food" value="" />
+    <label for="drink">Drink</label>
+    <input type="text" value="" name="drink" />
+    <button type="submit">Change!</button>
+</form>

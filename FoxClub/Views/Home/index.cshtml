@@ -1,0 +1,25 @@
+﻿@using FoxClub.Models
+@model Fox
+@{ Layout = "_Layout";}
+@Html.Partial("_MenuList")
+
+<img src="/app-images/greenfox.png" alt="" />
+
+<p>This is @Model.Name. Currently living on @Model.FoodDrink[0] and @Model.FoodDrink[1]. He knows @Model.Tricks.Count() tricks.</p>
+
+<h1>Known tricks</h1>
+
+@if (Model.Tricks.Any())
+{
+    @foreach (var trick in @Model.Tricks)
+    {
+    <ul>
+        <li>@trick</li>
+    </ul>
+    }
+} else
+{
+<p>You know no tricks,yet. Go and learn some.</p>
+}
+
+
